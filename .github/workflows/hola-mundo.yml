@@ -1,21 +1,11 @@
-name: Python application
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+name: Aprendiendo GitHub Actions
+run-name: ¡Estoy aprendiendo GitHub Actions!
+on: [push]
 jobs:
-  build:
-
+  hola-mundo:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-
-    - name: script-runing
-      run: python hello_world.py
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Correr script
+        run: python hello_world.py
